@@ -135,7 +135,7 @@ def Discriminator_separable_rotations(
     - variables: tf variables
     """
     data_format = "NHWC"
-    with tf.name_scope("Discriminator_sep_rotations", [poses, shapes]):
+    with tf.name_scope("Discriminator_sep_rotations", values=[poses, shapes]):
         with tf.variable_scope("D") as scope:
             with slim.arg_scope(
                 [slim.conv2d, slim.fully_connected],
